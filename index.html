@@ -16,7 +16,7 @@
   <header>
     <!-- Navbar -->
     <nav
-      class="navbar flex justify-between items-center px-[60px] py-[15px] shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)] bg-white">
+      class="navbar flex flex-col lg:flex-row lg:justify-between items-center gap-4 lg:gap-0 lg:px-[60px] lg:py-[8px] shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)] bg-white">
       <div class="left-side flex gap-[10px] items-center">
         <img src="assets/logo.png" alt="Logo" class="logo" height="50" width="50" />
         <h1 class="text-[#006747] font-extrabold text-[24px] leading-[25px]">
@@ -26,303 +26,321 @@
       </div>
       <div class="right-side">
         <ul class="menu menu-horizontal px-1 gap-[20px]">
-          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[123px] h-[52px] flex justify-center items-center">
+          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
             <p class="text-[16px] font-black">0</p>
-            <span>
-              <img src="assets/heart.png" alt="Logo" height="30" width="30" /></span>
+            <span><img src="assets/heart.png" alt="Logo" height="30" width="30" /></span>
           </li>
-          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[123px] h-[52px] flex justify-center items-center">
+          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
             <p class="text-[16px] font-black">0</p>
-            <span>
-              <img src="assets/coin.png" alt="Logo" height="30" width="30" /></span>
+            <span><img src="assets/coin.png" alt="Logo" height="30" width="30" /></span>
           </li>
-          <li class="bg-[#00a63e] rounded-[50px] p-[12px] w-[127px] h-[52px] flex justify-center items-center">
+          <li class="bg-[#00a63e] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
             <p class="text-white text-[16px] font-semibold">0 Copy</p>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+
   <!-- Hero -->
   <div
     class="hero bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white p-4">
     <div class="hero-content flex flex-col items-center text-center">
-      <img src="assets/bangladesh-govt-logo.png" alt="Hero Image" class="hero-image" height="92" width="92" />
-      <h1 class="hero-title text-[40px] font-semibold">
+      <img src="assets/bangladesh-govt-logo.png" alt="Hero Image" class="hero-image" height="70" width="70" />
+      <h1 class="hero-title text-[24px] lg:text-[32px] font-semibold">
         জরুরি সেবা ডিরেক্টরি
       </h1>
-      <p class="hero-description text-[20px] font-semibold">
+      <p class="hero-description text-[16px] lg:text-[20px] font-semibold">
         Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
       </p>
     </div>
   </div>
+
   <!-- Main Content -->
   <main class="bg-[#41ff6b1a] min-h-screen flex justify-center px-4 md:px-[58px] py-[48px]">
-    <div class="flex flex-col lg:flex-row gap-[30px] w-full max-w-[1800px]">
+    <div class="flex flex-col-reverse lg:flex-row gap-[30px] w-full max-w-[1800px]">
       <!-- Left: Cards section -->
       <div class="card-section flex flex-wrap gap-[30px] flex-grow">
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-2 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">জাতীয় জরুরি সেবা</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">National Emergency</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">জাতীয় জরুরি সেবা</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">National Emergency</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">999</h2>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
               <span
-                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px] font-normal text-[#5c5c5c]">সার্বজনীন</span>
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সার্বজনীন</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/police.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#dfefff] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/police.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">পুলিশ</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Police</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">পুলিশ</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Police</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">999</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-              font-normal text-[#5c5c5c]">পুলিশ</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">পুলিশ</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/fire-service.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/fire-service.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">ফায়ার সার্ভিস</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Fire Service</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">ফায়ার সার্ভিস</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Fire Service</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">999</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-              font-normal text-[#5c5c5c]">ফায়ার</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">ফায়ার</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/ambulance.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/ambulance.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">অ্যাম্বুলেন্স</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Ambulance</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">অ্যাম্বুলেন্স</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Ambulance</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">1994-999999</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                    font-normal text-[#5c5c5c]">স্বাস্থ্য</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">1994-999999</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">স্বাস্থ্য</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">নারী ও শিশু সহায়তা</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Women & Child Helpline</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">নারী ও শিশু সহায়তা</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Women & Child Helpline</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">109</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                    font-normal text-[#5c5c5c]">সহায়তা</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">109</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সহায়তা</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">দুদক</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Anti-Corruption</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">দুদক</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Anti-Corruption</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">106</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                    font-normal text-[#5c5c5c]">সরকারি</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">106</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সরকারি</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">বিদ্যুৎ বিভ্রাট</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Electricity Outage</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">বিদ্যুৎ বিভ্রাট</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Electricity Outage</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">16216</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                          font-normal text-[#5c5c5c]">বিদ্যুৎ</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">16216</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">বিদ্যুৎ</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
               <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">ব্র্যাক</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Brac</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">ব্র্যাক</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Brac</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">16445</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                          font-normal text-[#5c5c5c]">এনজিও</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">16445</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">এনজিও</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full sm:w-[436px] rounded-xl shadow-md bg-white">
-          <div class="card-body p-[32px]">
+        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+          <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
-              <div class="bg-[#ffe3e2] rounded-2xl p-3">
-                <img src="assets/emergency.png" alt="Hero Image" class="" height="32" width="32" />
+              <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="alert('icon clicked')"></i>
             </div>
-            <div class="pt-4 pb-2">
-              <h2 class="card-title text-[24px] font-bold text-[#111111]">বাংলাদেশ রেলওয়ে</h2>
-              <p class="text-[18px] font-normal text-[#5c5c5c]">Bangladesh Railway</p>
+            <div class="pt-4">
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">বাংলাদেশ রেলওয়ে</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Bangladesh Railway</p>
             </div>
-            <div class="pb-[24px]">
-              <h2 class="card-title text-[32px] font-bold text-[#111111]">163</h2>
-              <span class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] text-[18px]
-                          font-normal text-[#5c5c5c]">পরিবহন</span>
+            <div class="pb-[10px]">
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">163</h2>
+              <span
+                class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">পরিবহন</span>
             </div>
-            <div class="card-actions justify-between gap-[8px]">
+            <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-15 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]"><i
-                  class="fa-regular fa-copy"></i> Copy</button>
-              <button class="btn bg-[#00a63e] py-4 px-15 text-white text-[16px] font-normal rounded-lg"><i
-                  class="fa-solid fa-phone"></i> Call</button>
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+                <i class="fa-solid fa-phone"></i> Call
+              </button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Right: Call History -->
-      <div class="history-section w-full lg:max-w-[400px] card bg-white shadow-md">
-        <div class="card-body p-[32px]">
+      <div class="history-section w-full max-w-[400px] lg:max-w-[355px] card bg-white shadow-md">
+        <div class="card-body p-[25px]">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <i class="fa-regular fa-clock text-[24px] text-[#5c5c5c]"></i>
-              <span class="text-[20px] font-medium text-[#111111]">Call History</span>
+              <span class="text-[20px] lg:text-[18px]  font-medium text-[#111111]">Call History</span>
             </div>
-            <button class="btn bg-[#00A63E] text-white px-6 py-2 rounded-full text-[16px] font-semibold">
+            <button class="btn bg-[#00A63E] text-white px-6 py-1 rounded-full text-[16px] font-semibold">
               Clear
             </button>
           </div>
@@ -330,6 +348,7 @@
       </div>
     </div>
   </main>
+  <script src="main.js"></script>
 </body>
 
 </html>
