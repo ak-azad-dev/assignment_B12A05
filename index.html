@@ -25,19 +25,19 @@
         </h1>
       </div>
       <div class="right-side">
-        <ul class="menu menu-horizontal px-1 gap-[20px]">
-          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
-            <p class="text-[16px] font-black">0</p>
-            <span><img src="assets/heart.png" alt="Logo" height="30" width="30" /></span>
-          </li>
-          <li class="bg-[#41ff6b1a] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
-            <p class="text-[16px] font-black">0</p>
-            <span><img src="assets/coin.png" alt="Logo" height="30" width="30" /></span>
-          </li>
-          <li class="bg-[#00a63e] rounded-[50px] p-[12px] w-[100px] h-[45px] flex justify-center items-center">
+        <div class="flex gap-[20px]">
+          <div class="bg-[#41ff6b1a] rounded-[50px] px-[16px] w-[110px] h-[45px] flex justify-between items-center">
+            <p class="text-[16px] font-black" id="lifeValue">0</p>
+            <img src="assets/heart.png" alt="Heart Icon" class="h-[30px] w-[30px]" />
+          </div>
+          <div class="bg-[#41ff6b1a] rounded-[50px] px-[16px] w-[110px] h-[45px] flex justify-between items-center">
+            <p class="text-[16px] font-black" id="coinValue">100</p>
+            <img src="assets/coin.png" alt="Coin Icon" class="h-[30px] w-[30px]" />
+          </div>
+          <div class="bg-[#00a63e] rounded-[50px] px-[16px] w-[110px] h-[45px] flex justify-center items-center">
             <p class="text-white text-[16px] font-semibold">0 Copy</p>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -68,14 +68,16 @@
               <div class="bg-[#ffe3e2] rounded-xl p-2 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">জাতীয় জরুরি সেবা</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">National Emergency</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">জাতীয় জরুরি
+                সেবা</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">National Emergency
+                Service</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">999</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সার্বজনীন</span>
             </div>
@@ -84,7 +86,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+                id="callButton">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -98,14 +101,14 @@
               <div class="bg-[#dfefff] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/police.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">পুলিশ</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Police</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">পুলিশ</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Police</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">999</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">পুলিশ</span>
             </div>
@@ -114,7 +117,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -128,14 +132,15 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/fire-service.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">ফায়ার সার্ভিস</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Fire Service</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">ফায়ার
+                সার্ভিস</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Fire Service</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">999</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">999</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">ফায়ার</span>
             </div>
@@ -144,7 +149,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -158,14 +164,16 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/ambulance.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">অ্যাম্বুলেন্স</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Ambulance</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">
+                অ্যাম্বুলেন্স</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Ambulance</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">1994-999999</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">
+                1994-999999</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">স্বাস্থ্য</span>
             </div>
@@ -174,7 +182,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -188,14 +197,16 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">নারী ও শিশু সহায়তা</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Women & Child Helpline</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">নারী ও শিশু
+                সহায়তা</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Women & Child Helpline
+              </p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">109</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">109</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সহায়তা</span>
             </div>
@@ -204,7 +215,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -218,14 +230,14 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">দুদক</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Anti-Corruption</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">দুদক</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Anti-Corruption</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">106</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">106</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">সরকারি</span>
             </div>
@@ -234,7 +246,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -248,14 +261,15 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">বিদ্যুৎ বিভ্রাট</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Electricity Outage</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">বিদ্যুৎ
+                বিভ্রাট</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Electricity Outage</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">16216</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">16216</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">বিদ্যুৎ</span>
             </div>
@@ -264,7 +278,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -278,14 +293,14 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">ব্র্যাক</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Brac</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">ব্র্যাক</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Brac</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">16445</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">16445</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">এনজিও</span>
             </div>
@@ -294,7 +309,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -302,20 +318,21 @@
         </div>
 
         <!-- Single Card -->
-        <div class="card w-full  lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
+        <div class="card w-full lg:w-[295px] lg:h-[280px] rounded-xl shadow-md bg-white">
           <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="alert('icon clicked')"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
             </div>
             <div class="pt-4">
-              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]">বাংলাদেশ রেলওয়ে</h2>
-              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]">Bangladesh Railway</p>
+              <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">বাংলাদেশ
+                রেলওয়ে</h2>
+              <p class="text-[18px] lg:text-[16px] font-normal text-[#5c5c5c]" id="serviceNameEn">Bangladesh Railway</p>
             </div>
             <div class="pb-[10px]">
-              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]">163</h2>
+              <h2 class="card-title text-[32px] lg:text-[28px] font-bold text-[#111111]" id="emergencyNumber">163</h2>
               <span
                 class="inline-flex items-center rounded-[9999px] bg-[#f2f2f2] px-[16px] py-[6px] lg:px-[10px] lg:py-[4px] text-[18px] lg:text-[14px] font-normal text-[#5c5c5c]">পরিবহন</span>
             </div>
@@ -324,7 +341,8 @@
                 class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg">
+              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+               >
                 <i class="fa-solid fa-phone"></i> Call
               </button>
             </div>
@@ -340,10 +358,11 @@
               <i class="fa-regular fa-clock text-[24px] text-[#5c5c5c]"></i>
               <span class="text-[20px] lg:text-[18px]  font-medium text-[#111111]">Call History</span>
             </div>
-            <button class="btn bg-[#00A63E] text-white px-6 py-1 rounded-full text-[16px] font-semibold">
+            <button class="btn bg-[#00A63E] text-white px-6 py-1 rounded-full text-[16px] font-semibold" >
               Clear
             </button>
           </div>
+          <div id="callHistoryContainer"></div>
         </div>
       </div>
     </div>
