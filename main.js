@@ -73,3 +73,9 @@ handleClickCallButton = (button) => {
     callHistoryContainer.prepend(callHistoryItem);
   }, 50);
 };
+
+// Function to click clear history button
+handleClickClearButton = () => {
+  const callHistoryElement = document.getElementById("callHistoryContainer");
+  callHistoryElement.remove();
+};
