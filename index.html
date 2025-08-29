@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"
     type="text/css" />
@@ -16,7 +17,7 @@
   <header>
     <!-- Navbar -->
     <nav
-      class="navbar flex flex-col lg:flex-row lg:justify-between items-center gap-4 lg:gap-0 lg:px-[60px] lg:py-[8px] shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)] bg-white">
+      class="navbar flex flex-col lg:flex-row lg:justify-between items-center gap-4 lg:gap-0 lg:px-[60px] lg:py-[8px] shadow-[0px_1px_50px_0px_rgba(181,181,181,0.25)] bg-white fixed top-0 left-0 z-20">
       <div class="left-side flex gap-[10px] items-center">
         <img src="assets/logo.png" alt="Logo" class="logo" height="50" width="50" />
         <h1 class="text-[#006747] font-extrabold text-[24px] leading-[25px]">
@@ -35,7 +36,7 @@
             <img src="assets/coin.png" alt="Coin Icon" class="h-[30px] w-[30px]" />
           </div>
           <div class="bg-[#00a63e] rounded-[50px] px-[16px] w-[110px] h-[45px] flex justify-center items-center">
-            <p class="text-white text-[16px] font-semibold">0 Copy</p>
+            <p class="text-white text-[16px] font-semibold" id="copyValue">0 Copy</p>
           </div>
         </div>
       </div>
@@ -44,7 +45,7 @@
 
   <!-- Hero -->
   <div
-    class="hero bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white p-4">
+    class="hero bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white p-4 pt-[70px]">
     <div class="hero-content flex flex-col items-center text-center">
       <img src="assets/bangladesh-govt-logo.png" alt="Hero Image" class="hero-image" height="70" width="70" />
       <h1 class="hero-title text-[24px] lg:text-[32px] font-semibold">
@@ -68,7 +69,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-2 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">জাতীয় জরুরি
@@ -83,10 +85,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)" id="callButton">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -101,7 +105,8 @@
               <div class="bg-[#dfefff] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/police.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">পুলিশ</h2>
@@ -114,10 +119,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -132,7 +139,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/fire-service.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">ফায়ার
@@ -146,10 +154,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -164,7 +174,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/ambulance.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">
@@ -179,10 +190,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -197,7 +210,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">নারী ও শিশু
@@ -212,10 +226,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -230,7 +246,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">দুদক</h2>
@@ -243,10 +260,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -261,7 +280,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">বিদ্যুৎ
@@ -275,10 +295,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -293,7 +315,8 @@
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
                 <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">ব্র্যাক</h2>
@@ -306,10 +329,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -322,9 +347,10 @@
           <div class="card-body p-[32px] lg:p-[20px]">
             <div class="flex justify-between items-center">
               <div class="bg-[#ffe3e2] rounded-xl p-3 lg:p-[8px]">
-                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]" />
+                <img src="assets/emergency.png" alt="Hero Image" class="h-[32px] w-[32px] lg:h-[24px] lg:w-[24px]"/>
               </div>
-              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" onclick="handleClickHeartIcon()"></i>
+              <i class="fa-regular fa-heart text-[24px] text-[#5c5c5c]" id="heartIcon"
+                onclick="handleClickHeartIcon(this)"></i>
             </div>
             <div class="pt-4">
               <h2 class="card-title text-[24px] lg:text-[18px] font-bold text-[#111111]" id="serviceNameBn">বাংলাদেশ
@@ -338,10 +364,12 @@
             </div>
             <div class="card-actions justify-between">
               <button
-                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5]">
+                class="btn bg-white py-4 px-10 lg:px-8 text-[#5c5c5c] text-[16px] font-normal rounded-lg border border-[#D4D6D5] hover:bg-[#111111] hover:text-[#FFFFFF]"
+                onclick="handleClickCopyButton(this)">
                 <i class="fa-regular fa-copy"></i> Copy
               </button>
-              <button class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg"
+              <button
+                class="btn bg-[#00a63e] py-4 px-11 lg:px-8 text-white text-[16px] font-normal rounded-lg hover:bg-[#5c5c5c]"
                 onclick="handleClickCallButton(this)">
                 <i class="fa-solid fa-phone"></i> Call
               </button>
@@ -358,7 +386,9 @@
               <i class="fa-regular fa-clock text-[24px] text-[#5c5c5c]"></i>
               <span class="text-[20px] lg:text-[18px]  font-medium text-[#111111]">Call History</span>
             </div>
-            <button class="btn bg-[#00A63E] text-white px-6 py-1 rounded-full text-[16px] font-semibold" onclick="handleClickClearButton()">
+            <button
+              class="btn bg-[#00A63E] text-white px-6 py-1 rounded-full text-[16px] font-semibold hover:bg-[#5c5c5c]"
+              onclick="handleClickClearButton()">
               Clear
             </button>
           </div>
