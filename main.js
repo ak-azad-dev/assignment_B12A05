@@ -56,10 +56,10 @@ function handleClickCallButton(button) {
 
   item.innerHTML = `
       <div class="flex-col items-center">
-        <div class="text-[#111111] font-normal text-[18px]">${serviceBn}</div>
-        <div class="mt-1 text-[#5c5c5c] font-normal text-[18px]">${number}</div>
+        <div class="text-[#111111] font-normal text-[16px]">${serviceBn}</div>
+        <div class="mt-1 text-[#5c5c5c] font-normal text-[16px]">${number}</div>
       </div>
-      <div class="text-[#111111] font-normal text-[18px]">${time}</div>
+      <div class="text-[#111111] font-normal text-[16px]">${time}</div>
     `;
   container.append(item);
 }
